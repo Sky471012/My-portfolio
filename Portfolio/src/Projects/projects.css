@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.projects {
+  margin: 0;
+  padding-top: 100px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: relative;
+  z-index: 40;
+}
+
+.projects h1 {
+  color: rgb(23, 23, 23);
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 3.5rem;
+  margin: 0px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(23, 23, 23);
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin: 10px;
+  text-align: center;
+}
+
+.projects span {
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: white;
+  margin: 10px;
+  padding: 0;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 10px 20px;
+}
+
+.vertical-divider {
+  width: 1px;
+  background-color: hsl(0, 0%, 65%);
+  height: auto; /* Adjusts to parent container */
+  margin: 0;
+}
+
+.slider-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Restricts max width for responsiveness */
+  height: 300px;
+  overflow: hidden;
+  background-color: rgb(23, 23, 23);
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 0px;
+}
+
+.web-dev,
+.design {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.projects img {
+  border: 1.5px solid white;
+  object-fit: cover; /* Ensures images fit without distortion */
+  border-radius: 8px;
+  height: 240px;
+}
+
+.card {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.card.active {
+  z-index: 2;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.card:not(.active) {
+  z-index: 1;
+  opacity: 0.5;
+  transform: translateX(-100%);
+}
+
+/* tab */
+@media (max-width: 1024px){
+  .projects{
+    min-height: none;
+  }
+
+  .projects-container{
+    flex-direction: column;
+    
+  }
+
+  .projects h1{
+    font-size: 6rem;
+  }
+
+  .vertical-divider{
+    display: none;
+  }
+
+  .web-dev, .design{
+    padding: 0px;
+  }
+
+  .slider-container{
+    height: 500px;
+    width: 90%;
+    max-width: none;
+  }
+
+  .projects img{
+    height: 400px;
+  }
+
+  .projects span{
+    font-size: 2rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px){
+  .projects{
+    min-height: none;
+  }
+
+  .projects-container{
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .projects h1{
+    font-size: 3rem;
+  }
+
+  .vertical-divider{
+    display: none;
+  }
+
+  .web-dev, .design{
+    padding: 0px;
+    width: 100%;
+  }
+
+  .slider-container{
+    height: 280px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .projects img{
+    height: 200px;
+  }
+
+  .projects span{
+    font-size: 1.5rem;
+  }
+}

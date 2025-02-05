@@ -1,0 +1,296 @@
+body {
+  margin: 0;
+}
+
+/* background */
+.header {
+  background-image: url('/src/assets/dp.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  position: fixed;
+
+}
+
+/* Navbar */
+.h-navbar {
+  padding: 30px 25px;
+}
+
+.h-logo a {
+  text-decoration: none;
+}
+
+.h-logo img {
+  border-radius: 50%;
+  height: 55px;
+  width: auto;
+  border: 1.5px solid white;
+  transition: 0.5s;
+}
+
+.h-logo img:hover {
+  text-decoration: none;
+  height: 65px;
+  width: auto;
+}
+
+.h-navdiv {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.h-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.h-menu-item {
+  margin-left: 30px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.h-menu-item a {
+  color: white;
+  text-decoration: none; /* Removes underlines */
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+}
+
+.h-menu-item a:hover {
+  cursor: pointer;
+  font-size: 1.8rem;
+  width: auto;
+}
+
+.h-menu-item img {
+  margin: 0 4px;
+  height: 12px;
+}
+
+/* bioData */
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bioData {
+  margin: 0px;
+  margin-right: 50px;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-align: right;
+  color: white;
+}
+
+.name {
+  font-size: 10.5rem;
+  margin: 0;
+}
+
+.bio {
+  font-family: "Hanken Grotesk", serif;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 0;
+}
+
+/* links */
+.link{
+  margin:10px 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link i {
+  color: white;
+  font-size: 40px;
+  transition: 0.5s;
+  margin: 0 30px;
+}
+
+.link i:hover {
+  filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+  /* font-size: 50px; */
+}
+
+.introduction {
+  color: black;
+  font-family: "montserrat", serif;
+  width: 38%;
+  text-align: justify;
+  padding: 0 40px;
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: bold;
+  align-self: end;
+}
+
+.introduction p {
+  margin: 0;
+  line-height: 1;
+  color: white;
+}
+
+.introduction img {
+  height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.blinking-text {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.1%, 100% {
+    opacity: 0;
+  }
+}
+
+/* tab */
+@media (max-width: 1024px) {
+  .header{
+    min-height: 0;
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+
+  .h-navdiv {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .h-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+
+  .h-menu-item {
+    margin: 10px 0;
+    font-size: 2rem;
+  }
+
+  .intro {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bioData {
+    margin: 10px;
+  }
+
+  .bio {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .introduction {
+    width: 90%;
+    font-size: 2rem;
+    padding: 0 20px;
+    margin: 20px;
+  }
+
+  .link {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+  .link i {
+    font-size: 65px;
+    margin: 0 15px;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .header {
+    min-height: 0;
+    padding: 20px 10px;
+  }
+
+  .h-navdiv {
+    margin-top: 40px;
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .h-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .h-menu-item {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bioData {
+    margin: 10px;
+  }
+
+  .name {
+    font-size: 6rem;
+  }
+
+  .bio {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .introduction {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0 20px;
+    margin: 20px;
+  }
+
+  .link {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+  .link i {
+    font-size: 45px;
+    margin: 0 15px;
+  }
+}

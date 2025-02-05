@@ -1,0 +1,97 @@
+/* Navbar */
+.navbar {
+  padding: 0px;
+  position: fixed;
+  z-index: 1000;
+  top: -110px; /* Positioned off-screen */
+  transition: top 0.5s ease;
+  background-color: rgb(23, 23, 23);
+  width: 100%;
+  margin: 0px;
+}
+
+.navbar-visible {
+  top: 0;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo img {
+  border-radius: 50%;
+  height: 40px;
+  width: auto;
+  border: 1px solid white;
+  transition: 0.5s;
+  margin: 0 12px;
+}
+
+.logo img:hover {
+  text-decoration: none;
+  height: 50px;
+  width: auto;
+}
+
+.navdiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+  width: 35%;
+}
+
+.menu-item {
+  margin: 0 15px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none; /* Removes underlines */
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+}
+.menu-item a:hover {
+  cursor: pointer;
+  color: rgb(186, 186, 186);
+}
+
+.menu-item img {
+  margin: 0 4px;
+  height: 12px;
+}
+
+/* tab */
+@media (max-width: 1024px){
+  .navdiv{
+    padding: 10px;
+  }
+
+  .logo img{
+    height: 60px;
+  }
+
+  .menu{
+    width: 50%;
+  }
+  
+  .menu-item{
+    font-size: 1.5rem;
+  }
+
+  .menu-item img{
+    height: 14px;
+  }
+}

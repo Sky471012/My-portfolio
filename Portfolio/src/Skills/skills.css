@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.skills {
+  background: white;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 40;
+}
+
+.skills h1 {
+  color: rgb(23, 23, 23);
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 3.5rem;
+  margin: 20px 0;
+  padding-top: 15px;
+  align-self: center;
+  color: rgb(23, 23, 23);
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+.skills h2 {
+  color: white;
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.skill {
+  display: flex;
+  background-color: rgb(23, 23, 23);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  height: 300px;
+  flex-direction: column;
+  transition: 0.5s;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 25%;
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.skill ul {
+  padding: 10px 40px;
+  list-style: square;
+}
+
+.skill hr {
+  width: 90%; /* Adjusts the length */
+  height: 1px; /* Adjusts the thickness */
+  background-color: white; /* Sets the color */
+  border: none;
+  margin: 10px;
+  align-self: center;
+}
+
+.skill:hover{
+    color: rgb(23, 23, 23);
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgb(23, 23, 23);
+}
+
+.skill:hover h2{
+    color: rgb(23, 23, 23);
+}
+
+.skill:hover hr{
+    background-color: rgb(23, 23, 23);
+}
