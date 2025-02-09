@@ -5,23 +5,23 @@ import './contact.css'
 function Contact() {
     const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-    emailjs
-      .sendForm('service_a4efdon', 'template_iepcu6h', form.current, {
-        publicKey: '2a-_W5UIB8MNTgQpj',
-      })
-      .then(
-        () => {
-            form.current.reset();
-            alert('Message sent successfully!');
-        },
-        (error) => {
-            alert(`Failed to send the message: ${error.text}`);
-        },
-      );
-  };
+        emailjs
+            .sendForm('service_a4efdon', 'template_iepcu6h', form.current, {
+                publicKey: '2a-_W5UIB8MNTgQpj',
+            })
+            .then(
+                () => {
+                    form.current.reset();
+                    alert('Message sent successfully!');
+                },
+                (error) => {
+                    alert(`Failed to send the message: ${error.text}`);
+                },
+            );
+    };
 
     return (
         <>
@@ -41,8 +41,8 @@ function Contact() {
                     <div className="vertical-divider"></div>
                     <div className="contact-right">
                         <form ref={form} onSubmit={sendEmail}>
-                            <input type="text" name="name" placeholder="Your Name" required/>
-                            <input type="email" name="email" placeholder="Your Email Id" required/>
+                            <input type="text" name="name" placeholder="Your Name" required />
+                            <input type="email" name="email" placeholder="Your Email Id" required />
                             <textarea cols="30" name="message" rows="6" placeholder="Your Message..." required></textarea>
                             <button type="submit" value='send'>SUBMIT</button>
                         </form>
@@ -53,8 +53,8 @@ function Contact() {
                     <span>© Aakash Sharma | All Rights Reserved</span>
                 </div>
             </div>
-            </>
-            )
+        </>
+    )
 }
 
 export default Contact;
