@@ -7,7 +7,6 @@ body {
 .projects {
   margin: 0;
   padding-top: 100px;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -52,11 +51,11 @@ h2 {
   padding: 10px 20px;
 }
 
-.vertical-divider {
-  width: 1px;
-  background-color: hsl(0, 0%, 65%);
-  height: auto; /* Adjusts to parent container */
-  margin: 0;
+.projects .vertical-divider {
+  width: 2px;
+  background-color: rgb(23, 23, 23);
+  min-height: 100%; 
+  margin: 10px 20px;
 }
 
 .slider-container {

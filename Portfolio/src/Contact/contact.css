@@ -3,7 +3,12 @@
   padding: 0;
 }
 
-hr {
+.contact * {
+  margin: 0;
+  padding: 0;
+}
+
+.contact hr {
   margin:20px;
   border: 1px solid rgb(23, 23, 23);
 }
@@ -32,6 +37,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-self: top;
 }
 
 .contact-left h1 {
@@ -66,10 +72,19 @@ hr {
   -webkit-text-fill-color: white;
 }
 
+.contact .vertical-divider {
+  width: 1.2px;
+  background-color: rgb(23, 23, 23);
+  min-height: 100%; 
+  margin: 10px 20px;
+  align-self: top;
+}
+
 .contact-right {
   width: 55%;
-  padding: 10px 50px;
+  padding: 20px 50px;
   display: flex;
+  align-self: top;
 }
 
 .contact-right form {
@@ -90,8 +105,8 @@ hr {
   border-radius: 5px;
   font-family: "montserrat", serif;
   margin: 10px;
-  min-width: 90%;
-  max-width: 90%;
+  min-width: 91.5%;
+  max-width: 91.5%;
   min-height: 100px;
   padding: 5px;
   border: 2px solid rgb(23, 23, 23);

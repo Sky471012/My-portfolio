@@ -14,8 +14,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  position: fixed;
-
+  width: 100%;
 }
 
 /* Navbar */
@@ -36,9 +35,8 @@ body {
 }
 
 .h-logo img:hover {
-  text-decoration: none;
-  height: 65px;
-  width: auto;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .h-navdiv {
@@ -52,13 +50,13 @@ body {
 
 .h-menu {
   display: flex;
+  gap: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .h-menu-item {
-  margin-left: 30px;
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
@@ -70,12 +68,11 @@ body {
   transition: 0.5s;
   display: flex;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .h-menu-item a:hover {
-  cursor: pointer;
-  font-size: 1.8rem;
-  width: auto;
+  transform: scale(1.1);
 }
 
 .h-menu-item img {
@@ -148,7 +145,7 @@ body {
 }
 
 .introduction p {
-  margin: 0;
+  margin-bottom: 35px;
   line-height: 1;
   color: white;
 }
