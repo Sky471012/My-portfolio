@@ -22,7 +22,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col">
       <Navbar show={showNavbar}/>
       <Header/>
       <About/>
@@ -30,7 +30,7 @@ function App() {
       <Skills/>
       <Projects/>
       <Contact/> 
-    </>
+    </div>
   )
 }
 
